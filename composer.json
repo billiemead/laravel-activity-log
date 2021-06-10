@@ -1,0 +1,42 @@
+{
+  "name": "billiemead/laravel-activity-log",
+  "description": "Easily log user activity in Laravel!",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "laravel",
+    "user",
+    "activity"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Billie Mead",
+      "email": "billie@billiemead.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Billiemead\\LaravelActivityLog\\": "src"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Billiemead\\LaravelActivityLog\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
