@@ -1,13 +1,8 @@
 <h1 align="center">Laravel Activity Logging</h1>
-<p align="center"><a href="https://packagist.org/packages/billiemead/laravel-activity-log"><img src="https://badgen.net/packagist/v/billiemead/laravel-activity-log" /></a>
-</p>
 
 <p align="center">Monitor your user activity with beautiful responsive & easy user-interface!</p>
 
-
-## Documentation
-Checkout features & full documentation of [Laravel Activity Log](https://laravelarticle.com/laravel-user-activity)
-
+![Image description](previews/preview.png)
 
 ### Change Log
 
