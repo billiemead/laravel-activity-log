@@ -13,7 +13,7 @@ class UserActivityInstall extends Command
      *
      * @var string
      */
-    protected $signature = 'user-activity:install';
+    protected $signature = 'activity-log:install';
 
     /**
      * The console command description.
@@ -41,8 +41,8 @@ class UserActivityInstall extends Command
     {
         $migrationFile = "2020_11_20_100001_create_log_table.php";
         //config
-        if (File::exists(config_path('user-activity.php'))) {
-            $confirm = $this->confirm("user-activity.php config file already exist. Do you want to overwrite?");
+        if (File::exists(config_path('activity-log.php'))) {
+            $confirm = $this->confirm("activity-log.php config file already exist. Do you want to overwrite?");
             if ($confirm) {
                 $this->publishConfig();
                 $this->info("config overwrite finished");

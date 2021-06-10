@@ -15,15 +15,15 @@ class LockoutListener
     {
         $this->request = $request;
 
-        $userInstance = config('user-activity.model.user');
+        $userInstance = config('activity-log.model.user');
         if(!empty($userInstance)) $this->userInstance = $userInstance;
     }
 
 
     public function handle($event)
     {
-        if (!config('user-activity.log_events.on_lockout', false)
-            || !config('user-activity.activated', true)) return;
+        if (!config('activity-log.log_events.on_lockout', false)
+            || !config('activity-log.activated', true)) return;
 
         if (!$event->request->has('email')) return;
         $user = $this->userInstance::where('email', $event->request->input('email'))->first();

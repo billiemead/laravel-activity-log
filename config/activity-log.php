@@ -3,7 +3,7 @@
 return [
     'activated'        => true, // active/inactive all logging
     'middleware'       => ['web', 'auth'],
-    'route_path'       => 'http://bsk2.herrmanneasyedit.com/core/admin/user-activity',
+    'route_path'       => 'http://bsk2.herrmanneasyedit.com/core/admin/activitylog',
     'admin_panel_path' => 'http://bsk2.herrmanneasyedit.com/core/admin',
     'delete_limit'     => 7, // default 7 days
 

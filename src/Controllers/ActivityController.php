@@ -13,7 +13,7 @@ class ActivityController extends Controller
     private $userInstance = "\App\User";
 
     public function __construct() {
-        $userInstance = config('user-activity.model.user');
+        $userInstance = config('activity-log.model.user');
         if(!empty($userInstance)) $this->userInstance = $userInstance;
     }
 
@@ -171,7 +171,7 @@ class ActivityController extends Controller
             $action = $request->get('action');
             switch ($action) {
                 case 'delete':
-                    $dayLimit = config('user-activity.delete_limit');
+                    $dayLimit = config('activity-log.delete_limit');
                     Log::whereRaw('log_date < NOW() - INTERVAL ? DAY', [$dayLimit])->delete();
                     return ['success' => true, 'message' => "Successfully deleted log data older than $dayLimit days"];
                     break;

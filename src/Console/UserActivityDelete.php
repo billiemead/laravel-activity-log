@@ -12,7 +12,7 @@ class UserActivityDelete extends Command
      *
      * @var string
      */
-    protected $signature = 'user-activity:delete {delete_limit?}';
+    protected $signature = 'activity-log:delete {delete_limit?}';
 
     /**
      * The console command description.
@@ -44,7 +44,7 @@ class UserActivityDelete extends Command
                     Log::whereRaw('log_date < NOW() - INTERVAL ? DAY', [$deleteLimit])->delete();
                     $this->info("Successfully deleted log data older than $deleteLimit days");
                 } else {
-                    $dayLimit = config('user-activity.delete_limit');
+                    $dayLimit = config('activity-log.delete_limit');
                     Log::whereRaw('log_date < NOW() - INTERVAL ? DAY', [$dayLimit])->delete();
                     $this->info("Successfully deleted log data older than $dayLimit days");
                 }

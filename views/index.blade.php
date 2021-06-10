@@ -415,8 +415,8 @@
         <span class="letter_a">A</span> <span>ctivity</span>
     </div>
     <div class="actions">
-        <a class="btn" href="{{url(config('user-activity.admin_panel_path'))}}">Goto Admin Panel</a>
-        <a class="btn" href="https://laravelarticle.com/laravel-user-activity" title="Laravel User Activity">Doc</a>
+        <a class="btn" href="{{url(config('activity-log.admin_panel_path'))}}">Goto Admin Panel</a>
+        <a class="btn" href="https://balancedesign.dev/laravel-activity-log" title="Laravel Activity Log">Doc</a>
     </div>
 </header>
 <section class="content">
@@ -548,7 +548,7 @@
     <footer>
         <div></div>
         <div class="footer_right">
-          <span class="text_light">Delete data older than {{ config('user-activity.delete_limit') }} days</span>
+          <span class="text_light">Delete data older than {{ config('activity-log.delete_limit') }} days</span>
             <button class="btn" ng-click="deleteLog()">DELETE</button>
         </div>
     </footer>

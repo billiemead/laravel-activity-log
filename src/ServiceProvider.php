@@ -7,7 +7,7 @@ use Billiemead\LaravelActivityLog\Console\UserActivityInstall;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    const CONFIG_PATH = __DIR__ . '/../config/user-activity.php';
+    const CONFIG_PATH = __DIR__ . '/../config/activity-log.php';
     const ROUTE_PATH = __DIR__ . '/../routes';
     const VIEW_PATH = __DIR__ . '/../views';
     const ASSET_PATH = __DIR__ . '/../assets';
@@ -17,7 +17,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     private function publish()
     {
         $this->publishes([
-            self::CONFIG_PATH => config_path('user-activity.php')
+            self::CONFIG_PATH => config_path('activity-log.php')
         ], 'config');
 
         $this->publishes([
@@ -37,7 +37,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->mergeConfigFrom(
             self::CONFIG_PATH,
-            'user-activity'
+            'activity-log'
         );
 
         $this->app->register(EventServiceProvider::class);

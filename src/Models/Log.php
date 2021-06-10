@@ -11,7 +11,7 @@ class Log extends Model
     private $userInstance = "\App\User";
 
     public function __construct() {
-        $userInstance = config('user-activity.model.user');
+        $userInstance = config('activity-log.model.user');
         if(!empty($userInstance)) $this->userInstance = $userInstance;
     }
 

@@ -15,8 +15,8 @@ class LogoutListener
 
     public function handle(Logout $event)
     {
-        if (!config('user-activity.log_events.on_logout', false)
-            || !config('user-activity.activated', true)) return;
+        if (!config('activity-log.log_events.on_logout', false)
+            || !config('activity-log.activated', true)) return;
 
         $user = $event->user;
         $dateTime = date('Y-m-d H:i:s');

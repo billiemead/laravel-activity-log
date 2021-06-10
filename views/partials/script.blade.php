@@ -22,7 +22,7 @@
 
     myApp.controller("LogCtrl", function ($scope, $http) {
 
-        var ROUTE_PATH = '{{url(config('user-activity.route_path'))}}';
+        var ROUTE_PATH = '{{url(config('activity-log.route_path'))}}';
         $scope.selected = {};
         $scope.popup = false;
         $scope.activeFilter = false;

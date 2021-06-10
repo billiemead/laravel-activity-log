@@ -120,7 +120,7 @@
         <footer>
             <div></div>
             <div class="footer_right">
-            <span class="text_light">Delete data older than {{ config('user-activity.delete_limit') }} days</span>
+            <span class="text_light">Delete data older than {{ config('activity-log.delete_limit') }} days</span>
                 <button class="btn" ng-click="deleteLog()">DELETE</button>
             </div>
         </footer>
