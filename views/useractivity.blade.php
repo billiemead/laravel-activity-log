@@ -227,7 +227,7 @@
                 </div>
             </div>
         </div>
-        @include('LaravelUserActivity::partials.script')
+        @include('LaravelActivityLog::partials.script')
     </section>
 @endsection
 
