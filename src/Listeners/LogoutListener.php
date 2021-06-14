@@ -1,6 +1,6 @@
 <?php
 
-namespace Haruncpi\LaravelUserActivity\Listeners;
+namespace Billiemead\LaravelActivityLog\Listeners;
 
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Http\Request;
