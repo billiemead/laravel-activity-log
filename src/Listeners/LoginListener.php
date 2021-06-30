@@ -2,6 +2,7 @@
 
 namespace Billiemead\LaravelActivityLog\Listeners;
 
+use Carbon\Carbon;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,5 +34,14 @@ class LoginListener
             'log_type'   => 'login',
             'data'       => json_encode($data)
         ]);
+
+        DB::table('time_records')->insert([
+            'user_id'    => $user->id,
+            'clock_in'   => $dateTime
+        ]);
+
+        DB::table('users')
+        ->where('id', $user->id)
+        ->update(['clocked_in' => '1']);
     }
 }
