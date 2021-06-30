@@ -160,7 +160,7 @@ class ActivityController extends Controller
         $exclude = ['failed_jobs', 'password_resets', 'migrations', 'logs'];
         $tables = array_diff($all, $exclude);
 
-        return view('LaravelUserActivity::useractivity', ['tables' => $tables]);
+        return view('LaravelActivityLog::useractivity', ['tables' => $tables]);
 
 
     }
